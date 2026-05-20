@@ -2,7 +2,7 @@ import requests
 
 
 
-class RammerClient:
+class CardClient:
     def __init__(self):
         self.base_url = "https://randommer.io"
 
@@ -41,6 +41,6 @@ class RammerClient:
             return None
 
 
-client = RammerClient()
+client = CardClient()
 print(client.get_card())
 print(client.get_get_card_types())
