@@ -1,6 +1,6 @@
 import requests
 
-
+from config import TOKEN
 
 class RandomClient:
     def __init__(self):
@@ -10,7 +10,7 @@ class RandomClient:
         url = f"{self.base_url}/api/Card"
 
         headers = {
-            "X-Api-Key": "17e2134fdcc64646add29d6807821072"
+            "X-Api-Key": TOKEN
         }
         query_params = {
             "type": "Visa",
@@ -28,7 +28,7 @@ class RandomClient:
         url = f"{self.base_url}/api/Card/Types"
 
         headers = {
-            "X-Api-Key": "17e2134fdcc64646add29d6807821072"
+            "X-Api-Key": TOKEN
         }
 
         response = requests.get(url, headers=headers)
